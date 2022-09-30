@@ -1,0 +1,94 @@
+// Chamado a biblioteca <math.h> para a realização de forma otimizada da potencialização e Raiz quadrada
+#include <math.h>
+#include <stdio.h>
+// O VOID significa que irá retornar vazio, ou seja, uma função que não retorna nada 
+int main(void){
+// Declaração das variáveis do tipo float, int e Double    
+int e;
+float r;
+float a;
+float b;
+double val;
+double sqroot;
+double x,y;
+
+// É exibido para o usuário através do printf havendo também as quebras de linhas para a organização
+    printf("Autor: Valdimir ferraz fogaça\nCurso: Análise e desenvolvimento de sistemas\nUniversidade: La salle\nMatrícula: 202210706\n");
+    printf("Escolha qual operação irá realizar: 1:Soma|2:Raiz quadrada|3:Multiplicação|4:Divisão|5:Potencialização\n");
+// O scanf capta os dados que o usuário digitou e atribui o valor a variável    
+    scanf("%d",&e); 
+
+// Foi usado o switch para determinar o que será executado dependendo da opção que o usuário escolher
+// Será usado uma variável de controle do tipo inteiro apenas para ser reponsável pela escolha
+    switch (e)
+    {
+        
+// Caso a opção seja 1, será realizado a operação de soma, caso seja 2 será Raiz quadrada, assim adiante      
+   case 1:
+   printf("------------------------Você escolheu SOMA!-----------------------\n\n");
+// Aqui é orientado ao usuário digitar o valor a ser calculado   
+   printf("Digite o primeiro valor: ");
+// Será resgatado os valores digitados e transferidos sucessivamente para as variavveis (a) e (b)   
+    scanf("%f",&a);
+    printf("Digite o segundo valor: ");
+    scanf("%f",&b);
+// Após recuperado os valores e atribuido as variaveis, é colocado uma terceira variavel do tipo float para
+// realizar a conta matemática contemplando não só as inteiras, utilizando o operador (+)
+    r = a + b;
+// Então é printado o resultado e concatenado a 3° variavel que recebeu os valores digitados pelo usuario 
+    printf("\nO resultado foi: %f",r);
+// Após é dado o break e finalização do switch    
+   break;
+   case 2:
+    printf("------------------------Você escolheu Raiz quadrada!-----------------------\n\n");
+    printf("Digite o valor para obter a raiz: ");
+// No próximo scanf é chamado a variavel do tipo double 
+    scanf("%lf",&val);
+// Aqui é realizado a operação através de uma função biblioteca incluída do começo do código, chamada <sqrt>
+// Nela é possível apenas realizar a operação apenas declarando 2 variaves e atribuindo a elas a função
+      sqroot = sqrt(val); printf("A raiz quadrada é: %lf = %lf", val, sqroot);
+   break;
+   case 3:
+   printf("------------------------Você escolheu Multiplicação!-----------------------\n\n");
+   printf("Digite o valor que vai ser multiplicado: ");
+    scanf("%f",&a);
+    printf("Digite o valor que irá multiplicar: ");
+    scanf("%f",&b);
+// Nesse caso é feita a Multiplicação com o operador (*)  
+    r = a * b;
+    printf("\nO resultado foi: %f",r);
+    break;
+    case 4:
+   printf("------------------------Você escolheu Divisão!-----------------------\n\n");
+   printf("Digite o valor a ser dividido: ");
+    scanf("%f",&a);
+    printf("Digite o valor que irá dividir: ");
+    scanf("%f",&b);
+// Aqui é usado o operador (/) para a Divisão    
+    r = a / b;
+    printf("\nO resultado foi: %f",r);
+    break;
+    case 5:
+    printf("------------------------Você escolheu Potencialização!-----------------------\n\n");
+     printf("Digite a base: ");
+// Nesse caso é utilizado outras 2 variaveis do tipo double para o recebimento dos dados     
+    scanf("%lf",&x);
+    printf("Digite o expoente: ");
+    scanf("%lf",&y);
+// Após o valor digitado ser transferido para (x) e (y) é criada uma terceira variavel do tipo double (result)
+// E utilizando a função <pow> pertencente a biblioteca <math.h> é realizado a Potencialização dos valores digitados
+    double result = pow(x, y);
+// Por fim é mostrado o resultado    
+    printf("O resultado foi: %.2lf", result);
+ 
+    break;
+   
+// O default é usado caso nenhum dos cases seja chamado, ou seja, caso o usuário digite algo 
+// Que não faça parte das opções acima
+   default: printf("Opção invalida\n");
+
+
+}
+// Aqui retorna o valor 0, mas não é utilizado diretamente nesse código    
+return 0;
+}

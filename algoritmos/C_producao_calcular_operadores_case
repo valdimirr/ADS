@@ -80,7 +80,6 @@ double x,y;
     double result = pow(x, y);
 // Por fim é mostrado o resultado    
     printf("O resultado foi: %.2lf", result);
- 
     break;
    case 6:
    printf("------------------------Você escolheu Subtração!-----------------------\n\n");

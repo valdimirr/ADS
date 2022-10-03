@@ -14,7 +14,7 @@ double x,y;
 
 // É exibido para o usuário através do printf havendo também as quebras de linhas para a organização
     printf("Autor: Valdimir ferraz fogaça\nCurso: Análise e desenvolvimento de sistemas\nUniversidade: La salle\nMatrícula: 202210706\n");
-    printf("Escolha qual operação irá realizar: 1:Soma|2:Raiz quadrada|3:Multiplicação|4:Divisão|5:Potencialização\n");
+    printf("Escolha qual operação irá realizar: 1:Soma|2:Raiz quadrada|3:Multiplicação|4:Divisão|5:Potencialização|6:Subtração\n");
 // O scanf capta os dados que o usuário digitou e atribui o valor a variável    
     scanf("%d",&e); 
 
@@ -82,7 +82,16 @@ double x,y;
     printf("O resultado foi: %.2lf", result);
  
     break;
-   
+   case 6:
+   printf("------------------------Você escolheu Subtração!-----------------------\n\n");
+   printf("Digite o primeiro valor: ");
+    scanf("%f",&a);
+    printf("Digite o valor que irá subtrai-lo: ");
+    scanf("%f",&b);
+// Nesse caso é feita a subtração com o operador (-)  
+    r = a - b;
+    printf("\nO resultado foi: %f",r);
+    break;
 // O default é usado caso nenhum dos cases seja chamado, ou seja, caso o usuário digite algo 
 // Que não faça parte das opções acima
    default: printf("Opção invalida\n");
